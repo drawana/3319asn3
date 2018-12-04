@@ -14,7 +14,6 @@ include "connecttodb.php";
 Select customer:
 <form action="showpurchases.php" method="post">
     <select name="pickcust" id="pickcust">
-        <option>Select Here</option>
         <?php
         include "getcustomers.php";
         ?>
@@ -22,6 +21,30 @@ Select customer:
 </form>
 
 <hr>
+<h1>Products: </h1>
+Our Products:
+<form method='post' action=''>
+    Order by:
+    <select name="alphaPrice">
+        <option value="0"> Alphabetical </option>
+        <option value="1"> Price </option>
+    </select>
+
+    <select name="ascDesc">
+        <option value="0"> Ascending </option>
+        <option value="1"> Descending </option>
+    </select>
+
+    <input type="submit" value="Submit"/>
+</form>
+
+<?php
+    if (isset($_POST['alphaPrice']))
+    {
+        include "showpurchases.php";
+    }
+?>
+
 <hr>
 </body>
 </html>
