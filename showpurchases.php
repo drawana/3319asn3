@@ -4,6 +4,10 @@
     <title>Customer Purchases</title>
 </head>
 <body>
+<?php
+include "connecttodb.php";
+
+?>
 
 <?php
 $whichCust = $_POST["cust"]; //get selected museum value from the form
