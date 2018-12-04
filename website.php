@@ -4,6 +4,7 @@
     <title>Assignment 3</title>
 </head>
 <body>
+<script src="customer.js"></script>
 
 <?php
 include "connecttodb.php";
