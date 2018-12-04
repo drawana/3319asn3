@@ -10,7 +10,7 @@ include "connecttodb.php";
 ?>
 
 <?php
-$whichCust = $_POST["cust"]; //get selected museum value from the form
+$whichCust = $_POST["pickcust"]; //get selected museum value from the form
 $query = "SELECT * FROM purchases INNER JOIN product ON purchases.productID = product.productID WHERE customerID = '$whichCust'"; //fill in with correct query
 $result = mysqli_query($connection, $query);
 if (!$result) {
