@@ -12,7 +12,7 @@ include "connecttodb.php";
 <h1>Customers </h1>
 Select customer:
 <form action="showpurchases.php" method="post">
-    <select name="cust" id="cust">
+    <select name="pickcust" id="pickcust">
         <option>Select Here</option>
         <?php
         include "getcustomers.php";
