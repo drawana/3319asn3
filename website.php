@@ -86,8 +86,10 @@ if (isset($_POST['newCustID'])) {
 
 <?php
 if (isset($_POST['phoneID'])) {
-    include "updatephone.php";
+    include "updatephone1.php";
 }
+if (isset($_POST['newNumber']))
+    include "updatephone2.php"
 
 ?>
 

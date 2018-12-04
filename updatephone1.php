@@ -8,7 +8,7 @@ if (empty($data['phonenumber'])) {
 } else {
     echo "Current number: ".$data['phonenumber']."\n";
     $html = "<form method='post' action=''>";
-    $html .= "New number: <input type=\"text\" name=\"newCustID\">";
+    $html .= "New number: <input type=\"text\" name=\"newNumber\">";
     $html .= "<input type=\"submit\" value=\"Submit\"/>";
     $html .= "</form>";
     echo $html;
