@@ -26,37 +26,33 @@ Our Products:
 <form method='post' action=''>
     Order by:
     <select name="alphaPrice">
-        <option value="0"> Alphabetical </option>
-        <option value="1"> Price </option>
+        <option value="0"> Alphabetical</option>
+        <option value="1"> Price</option>
     </select>
 
     <select name="ascDesc">
-        <option value="0"> Ascending </option>
-        <option value="1"> Descending </option>
+        <option value="0"> Ascending</option>
+        <option value="1"> Descending</option>
     </select>
 
     <input type="submit" value="Submit"/>
 </form>
 
 <?php
-    if (isset($_POST['alphaPrice']))
-    {
-        include "showproducts.php";
-    }
+include "showproducts.php";
 ?>
 
 <hr>
 <h1>New purchase: </h1>
 <form method='post' action=''>
     Customer ID: <input type="text" name="custID">
-    ProductID: <input type="text" name="prodID" >
+    ProductID: <input type="text" name="prodID">
     Quantity: <input type="number" name="quantity" min="1">
     <input type="submit" value="Submit"/>
 </form>
 
 <?php
-if (isset($_POST['custID']))
-{
+if (isset($_POST['custID'])) {
     include "insertpurchase.php";
 }
 ?>
@@ -66,19 +62,33 @@ if (isset($_POST['custID']))
 <h1>New Customer: </h1>
 <form method='post' action=''>
     Customer ID: <input type="text" name="newCustID">
-    First Name: <input type="text" name="fname" >
-    Last Name: <input type="text" name="lname" >
-    City: <input type="text" name="city" >
-    Phone Number: <input type="text" name="phone" >
-    Agent ID: <input type="text" name="agentID" >
+    First Name: <input type="text" name="fname">
+    Last Name: <input type="text" name="lname">
+    City: <input type="text" name="city">
+    Phone Number: <input type="text" name="phone">
+    Agent ID: <input type="text" name="agentID">
     <input type="submit" value="Submit"/>
 </form>
 
 <?php
-if (isset($_POST['newCustID']))
-{
+if (isset($_POST['newCustID'])) {
     include "newcustomer.php";
 }
+?>
+
+<hr>
+
+<h1>Update Phone Number: </h1>
+<form method='post' action=''>
+    Customer ID: <input type="text" name="phoneID">
+    <input type="submit" value="Submit"/>
+</form>
+
+<?php
+if (isset($_POST['phoneID'])) {
+    include "updatephone.php";
+}
+
 ?>
 
 

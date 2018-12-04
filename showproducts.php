@@ -1,12 +1,18 @@
 <?php
-if ($_POST['alphaPrice'] == 0 and $_POST['ascDesc'] == 0)
-    $query = "SELECT * FROM product ORDER BY description;";
-else if ($_POST['alphaPrice'] == 1 and $_POST['ascDesc'] == 0)
-    $query = "SELECT * FROM product ORDER BY cost;";
-else if ($_POST['alphaPrice'] == 0 and $_POST['ascDesc'] == 1)
-    $query = "SELECT * FROM product ORDER BY description DESC;";
+
+
+if (isset($_POST['alphaPrice'])) {
+    if ($_POST['alphaPrice'] == 0 and $_POST['ascDesc'] == 0)
+        $query = "SELECT * FROM product ORDER BY description;";
+    else if ($_POST['alphaPrice'] == 1 and $_POST['ascDesc'] == 0)
+        $query = "SELECT * FROM product ORDER BY cost;";
+    else if ($_POST['alphaPrice'] == 0 and $_POST['ascDesc'] == 1)
+        $query = "SELECT * FROM product ORDER BY description DESC;";
+    else
+        $query = "SELECT * FROM product ORDER BY cost DESC;";
+}
 else
-    $query = "SELECT * FROM product ORDER BY cost DESC;";
+    $query = "SELECT * FROM product;";
 
 $result = mysqli_query($connection, $query);
 if (!$result) {
