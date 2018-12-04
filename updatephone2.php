@@ -1,6 +1,6 @@
 <?php
 $newNumber = $_POST['newNumber'];
-$phoneID = $GLOBALS['phoneID'];
+$phoneID = $_POST['phoneID'];
 echo $newNumber;
 echo $phoneID;
 $sql = "UPDATE customer SET phonenumber = '$newNumber' WHERE customerID='$phoneID'";
