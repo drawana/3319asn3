@@ -10,7 +10,7 @@ if (!$countResult) {
 $query = "";
 
 $count = mysqli_fetch_assoc($countResult);
-echo $count;
+echo $count['COUNT(*)'];
 
 mysqli_free_result($countResult);
 ?>
