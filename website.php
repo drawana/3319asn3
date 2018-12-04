@@ -49,8 +49,8 @@ Our Products:
 <h1>New purchase: </h1>
 <form method='post' action=''>
     Customer ID: <input type="text" name="custID">
-    ProductID: <input type="text" name="prodID">
-    Quantity: <input type="text" name="quantity">
+    ProductID: <input type="text" name="prodID" >
+    Quantity: <input type="number" name="quantity" min="1">
     <input type="submit" value="Submit"/>
 </form>
 
