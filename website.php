@@ -93,6 +93,10 @@ if (isset($_POST['newNumber']))
 
 ?>
 
+<hr>
+
+<h1>Delete User</h1>
+
 
 </body>
 </html>
