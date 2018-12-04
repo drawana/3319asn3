@@ -10,7 +10,7 @@ if (empty($data['phonenumber'])) {
     echo "Current number: ".$data['phonenumber']."\n";
     $html = "<form method='post' action=''>";
     $html .= "New number: <input type=\"text\" name=\"newNumber\">";
-    $html .= "Customer ID: <input type=\"text\" name=\"phoneID\" value='$phoneID' readonly>";
+    $html .= "Customer ID: <input type=\"hidden\" name=\"phoneID\" value='$phoneID'>";
     $html .= "<input type=\"submit\" value=\"Submit\"/>";
     $html .= "</form>";
     echo $html;
