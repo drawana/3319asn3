@@ -1,6 +1,6 @@
 <?php
 $newCustID = $_POST['newCustID'];
-$query = "SELECT COUNT(*) AS total FROM customers WHERE customerID = '$newCustID'";
+$query = "SELECT COUNT(*) AS total FROM customer WHERE customerID = '$newCustID'";
 $result = mysqli_query($connection, $query);
 $data = mysqli_fetch_assoc($result);
 if ($data['total'] > 0) {
