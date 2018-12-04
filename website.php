@@ -75,7 +75,7 @@ if (isset($_POST['custID']))
 </form>
 
 <?php
-if (isset($_POST['custID']))
+if (isset($_POST['newCustID']))
 {
     include "newcustomer.php";
 }
