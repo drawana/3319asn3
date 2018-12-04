@@ -61,6 +61,25 @@ if (isset($_POST['custID']))
 }
 ?>
 
+<hr>
+
+<h1>New Customer: </h1>
+<form method='post' action=''>
+    Customer ID: <input type="text" name="newCustID">
+    First Name: <input type="text" name="fname" >
+    Last Name: <input type="text" name="lname" >
+    City: <input type="text" name="city" >
+    Phone Number: <input type="text" name="phone" >
+    Agent ID: <input type="text" name="agentID" >
+    <input type="submit" value="Submit"/>
+</form>
+
+<?php
+if (isset($_POST['custID']))
+{
+    include "newcustomer.php";
+}
+?>
 
 
 </body>
