@@ -41,7 +41,7 @@ Our Products:
 <?php
     if (isset($_POST['alphaPrice']))
     {
-        include "showpurchases.php";
+        include "showproducts.php";
     }
 ?>
 
