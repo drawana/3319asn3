@@ -1,5 +1,4 @@
 <?php
-include "connecttodb.php";
 if ($_POST['alphaPrice'] == 0 and $_POST['ascDesc'] == 0)
     $query = "SELECT * FROM product ORDER BY description;";
 else if ($_POST['alphaPrice'] == 1 and $_POST['ascDesc'] == 0)

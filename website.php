@@ -46,6 +46,23 @@ Our Products:
 ?>
 
 <hr>
+<h1>New purchase: </h1>
+<form method='post' action=''>
+    Customer ID: <input type="text" name="custID">
+    ProductID: <input type="text" name="prodID">
+    Quantity: <input type="text" name="quantity">
+    <input type="submit" value="Submit"/>
+</form>
+
+<?php
+if (isset($_POST['custID']))
+{
+    include "insertpurchase.php";
+}
+?>
+
+
+
 </body>
 </html>
 
