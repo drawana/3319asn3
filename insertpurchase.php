@@ -7,7 +7,6 @@ $countResult = mysqli_query($connection, $countQuery);
 if (!$countResult) {
     die("databases query for count failed.");
 }
-$query = "";
 
 $count = mysqli_fetch_assoc($countResult);
 if ($count['COUNT(*)'] == 0)

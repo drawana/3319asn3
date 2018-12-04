@@ -95,8 +95,21 @@ if (isset($_POST['newNumber']))
 
 <hr>
 
-<h1>Delete User</h1>
+<h1>Delete Customer</h1>
+<form method='post' action=''>
+    Customer ID to Delete: <input type="text" name="deleteID">
+    <input type="submit" value="Submit"/>
+</form>
 
+<?php
+if (isset($_POST['deleteID'])) {
+    include "deletecustomer.php";
+}
+?>
+
+<?php
+mysqli_close($connection);
+?>
 
 </body>
 </html>
