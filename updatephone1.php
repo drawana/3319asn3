@@ -1,5 +1,6 @@
 <?php
-$phoneID = $_POST['phoneID'];
+
+$GLOBALS['phoneID'] = $_POST['phoneID'];
 $query = "SELECT * FROM customer WHERE customerID = '$phoneID'";
 $result = mysqli_query($connection, $query);
 $data = mysqli_fetch_assoc($result);
