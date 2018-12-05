@@ -116,6 +116,11 @@ if (isset($_POST['deleteID'])) {
     <input type="submit" value="Submit"/>
 </form>
 
+<hr>
+<h1>Products that have not been purchased:</h1>
+<?php
+include "unpurchased.php";
+?>
 
 <?php
 mysqli_close($connection);

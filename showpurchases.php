@@ -6,6 +6,7 @@
 <body>
 
 <?php
+include "connecttodb.php";
 $whichCust = $_POST["pickcust"]; //get selected museum value from the form
 $query = "SELECT * FROM purchases INNER JOIN product ON purchases.productID = product.productID WHERE customerID = '$whichCust'"; //fill in with correct query
 $result = mysqli_query($connection, $query);
@@ -19,6 +20,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 }
 echo "</ul>"; //end the bulleted list
 mysqli_free_result($result);
+mysqli_close($connection);
 ?>
 </body>
 </html>

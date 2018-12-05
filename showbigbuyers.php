@@ -22,6 +22,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 }
 echo "</ul>"; //end the bulleted list
 mysqli_free_result($result);
+mysqli_close($connection);
 ?>
 </body>
 </html>
