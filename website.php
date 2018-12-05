@@ -131,6 +131,7 @@ Select Product ID:
         include "getitems.php";
         ?>
     </select>
+    <input type="submit" value="Submit"/>
 </form>
 
 <?php
