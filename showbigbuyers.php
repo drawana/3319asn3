@@ -5,11 +5,13 @@
 </head>
 <body>
 
+
 <?php
+include "connecttodb.php";
 $qty = $_POST["overThis"];
-$query = "SELECT firstname, lastname, description, quantity FROM purchases INNER JOIN product ON purchases.productID = product.productID INNER JOIN customer ON purchases.customerID = customer.customerID WHERE quantity > '$qty';"; //fill in with correct query
+$query = "SELECT firstname, lastname, description, quantity FROM purchases INNER JOIN product ON purchases.productID = product.productID INNER JOIN customer ON purchases.customerID = customer.customerID WHERE quantity > '$qty';";
 $result = mysqli_query($connection, $query);
-echo "<h1> Customers who purchased more than '$qty' items:</h1>";
+echo "<h1> Customers who purchased more than $qty items:</h1>";
 
 if (!$result) {
     die("databases query on customers failed. ");
