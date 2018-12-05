@@ -7,9 +7,6 @@ if (!$result) {
 }
 $row = mysqli_fetch_assoc($result);
 $total = $row['quantity'] * $row['cost'];
-echo "<b>" . "Item: " . $row["description"] . ", Total quantity Sold: " . $row["quantity"] . ", Total revenue: $" . $total . "</b>";
+echo "<br>" . "Item: " . $row["description"] . "<br> Total quantity Sold: " . $row["quantity"] . "<br> Total revenue: $" . $total;
 mysqli_free_result($result);
 ?>
-
-SELECT productID, SUM(quantity) FROM purchases GROUP BY productID;
-SELECT SUM(quantity), description, cost FROM purchases INNER JOIN product ON purchases.productID = product.productID WHERE product.productID = 66;
