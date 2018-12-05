@@ -112,7 +112,7 @@ if (isset($_POST['deleteID'])) {
 <h1>Big Buyers:</h1>
 <form method='post' action='showbigbuyers.php'>
     Show customers who've purchased more than: <br>
-    <input type="text" name="overThis">
+    <input type="number" name="overThis" min="0">
     <input type="submit" value="Submit"/>
 </form>
 
@@ -120,6 +120,23 @@ if (isset($_POST['deleteID'])) {
 <h1>Products that have not been purchased:</h1>
 <?php
 include "unpurchased.php";
+?>
+
+<hr>
+<h1>View all sales of a product:</h1>
+Select Product ID:
+<form action="" method="post">
+    <select name="pickProd" id="pickProd">
+        <?php
+        include "getitems.php";
+        ?>
+    </select>
+</form>
+
+<?php
+if (isset($_POST['pickProd'])) {
+    include "showproducttotals.php";
+}
 ?>
 
 <?php
