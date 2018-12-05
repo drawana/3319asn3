@@ -1,10 +1,14 @@
 <?php
 $newCustID = $_POST['newCustID'];
+
+// Determine if customer ID exists
 $query = "SELECT COUNT(*) AS total FROM customer WHERE customerID = '$newCustID'";
 $result = mysqli_query($connection, $query);
 $data = mysqli_fetch_assoc($result);
 if ($data['total'] > 0) {
     echo "ERROR: Customer ID is taken.";
+
+// Insert new customer from given data
 } else {
     $fname = $_POST['fname'];
     $lname = $_POST['lname'];

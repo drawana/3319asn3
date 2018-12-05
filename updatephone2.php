@@ -1,4 +1,6 @@
 <?php
+
+// Update the customer's phone number
 $newNumber = $_POST['newNumber'];
 $phoneID = $_POST['phoneID'];
 $sql = "UPDATE customer SET phonenumber = '$newNumber' WHERE customerID='$phoneID'";

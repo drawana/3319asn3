@@ -1,6 +1,7 @@
 <?php
 $deleteID = $_POST['deleteID'];
 
+// Determine if the ID exists
 $query = "SELECT COUNT(*) FROM customer WHERE customerID='$deleteID';";
 $countResult = mysqli_query($connection, $query);
 if (!$countResult) {
@@ -11,6 +12,8 @@ $count = mysqli_fetch_assoc($countResult);
 if ($count['COUNT(*)'] == 0)
     echo "ERROR: Customer ID does not exist.";
 else {
+
+    // Delete row with ID
     $sql = " DELETE FROM customer WHERE customerID ='$deleteID'";
 
     if (mysqli_query($connection, $sql)) {

@@ -6,6 +6,7 @@
 <body>
 <script src="customer.js"></script>
 
+<!-- Connect to database -->
 <?php
 include "connecttodb.php";
 
