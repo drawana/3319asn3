@@ -95,7 +95,7 @@ if (isset($_POST['newNumber']))
 
 <hr>
 
-<h1>Delete Customer</h1>
+<h1>Delete Customer:</h1>
 <form method='post' action=''>
     Customer ID to Delete: <input type="text" name="deleteID">
     <input type="submit" value="Submit"/>
@@ -106,6 +106,16 @@ if (isset($_POST['deleteID'])) {
     include "deletecustomer.php";
 }
 ?>
+
+<hr>
+
+<h1>Big Buyers:</h1>
+<form method='post' action='showbigbuyers.php'>
+    Show customers who've purchased more than: <br>
+    <input type="text" name="overThis">
+    <input type="submit" value="Submit"/>
+</form>
+
 
 <?php
 mysqli_close($connection);
